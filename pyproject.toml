@@ -1,0 +1,24 @@
+[project]
+name = "sensory-map-drawer"
+version = "0.1.0"
+description = "Draw sensory maps on a grid over a body image (Python version of mapping_sensation_gui.m) and save them as CSV"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "pandas>=2.2",
+]
+
+[project.scripts]
+draw-map = "sensory_map_drawer.drawer:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sensory_map_drawer"]
