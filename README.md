@@ -7,16 +7,28 @@ body image, and save them as a tidy CSV. Python version of the MATLAB
 
 ## Install
 
-As a command available everywhere:
+Needs Python ≥ 3.11. With [uv](https://docs.astral.sh/uv/), as a command available everywhere:
 
 ```
-uv tool install --editable ~/Documents/src_code/sensory-map-drawer
+uv tool install git+https://github.com/annasparapani/sensory-map-drawer
 ```
+
+Without uv: `pip install git+https://github.com/annasparapani/sensory-map-drawer`.
 
 As a dependency of another uv project (gives you `draw-map` and the Python API there):
 
 ```
-uv add --editable ~/Documents/src_code/sensory-map-drawer
+uv add git+https://github.com/annasparapani/sensory-map-drawer
+```
+
+Add `@v0.1.0` (or another tag) to the URL to pin a version. Update with
+`uv tool upgrade sensory-map-drawer`.
+
+For development, clone the repo and install it editable:
+
+```
+git clone https://github.com/annasparapani/sensory-map-drawer
+uv tool install --editable ./sensory-map-drawer
 ```
 
 ## Draw
